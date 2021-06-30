@@ -1,0 +1,364 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Bogdan Banica</title>
+    <link rel="shortcut icon" href="./images/shared/favicon.ico" />
+    <style>
+        body {
+            background-color: #5DB9F3;
+        }
+        #page {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas: "head head"
+                       "main main"
+                       "foot foot";
+  grid-template-rows: 1fr 10fr 1fr;
+  grid-template-columns: 1fr;
+}
+@media only screen and (max-width: 600px) {
+    #page {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas: "head head"
+                       "main main"
+                       "foot foot";
+  grid-template-rows: 1fr 10fr 1fr;
+  grid-template-columns: 1fr;
+}
+    #page > main img {
+        width: 75%;
+    }
+     #page > .img {
+        width: 100%;
+    }
+    #page > main video {
+        border: 5px solid white;
+        border-radius: 5px;
+        width: 100%;
+    }
+    #page > .description-head{
+    width:50%;
+    text-align: center;
+    margin:auto;
+    font-weight: 700;
+    color: #003353;
+}
+#page > .description {
+    width: 80%;
+    text-align: center;
+    margin:auto;
+    font-size: 1.4em;
+    font-weight: 400;
+}
+#page > .personaimg {
+    width: 30%;
+}
+}
+
+#page > header {
+text-align: center;
+    grid-area: head;
+    background-color: #055282;
+    padding: 1%;
+  color: white;
+}
+
+#page > main {
+  grid-area: main;
+  background-color: #5DB9F3;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  color: #055282;
+  margin:auto;
+}
+
+#page > footer {
+  grid-area: foot;
+  background-color: #055282;
+  text-align: center;
+  color:white;
+  line-height: 100px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.contact1 {
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+  margin-right: 5%;
+  background-color: #FFCA3A;
+  color: #95710D;
+  font-weight: 700;
+  border-radius: 5px;
+  border:none;
+  margin:auto;
+  padding:1em;
+  float: right;
+  text-decoration: none;
+}
+.contact1:hover {
+    background-color:#FFE292;
+    color: #95710D;
+}
+.contact1:active {
+    background-color: #95710D;
+    color: #3f2f03;
+}
+.buttonstyle:hover {
+    background-color:#FFE292;
+    color: #95710D;
+}
+.buttonstyle:active {
+    background-color: #95710D;
+    color: #3f2f03;
+}
+.headericon {
+    display: inline;
+    margin:auto;
+    float: left;
+    justify-content: center;
+}
+.abouthead {
+    font-weight: 800;
+    color: white;
+    text-shadow: 0em 0.1em 0.1em #055282;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    float: center;
+    margin: auto;
+    text-decoration: solid 0.08em white underline;
+    text-underline-position: under;
+}
+.abouthead2 {
+    font-weight: 800;
+    color: #003353;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    float: center;
+    margin: auto;
+}
+.aboutme {
+    font-size: 1.4em;
+    font-weight: 400;
+}
+.buttonstyle {
+  background-color: #FFCA3A;
+  color: #95710D;
+  font-weight: 700;
+  border-radius: 5px;
+  border:none;
+  padding: 1em;
+  padding-left: 20%;
+  padding-right: 20%;
+  font-size: 1.4em;
+  box-shadow: 0px 3px #4E9CCD; 
+}
+.img {
+    width: 80%;
+    border-bottom: solid 1em #5DB9F3;
+}
+.buttonstyle2:hover {
+    background-color:#46a2db;
+    color: #003353;
+}
+.buttonstyle2:active {
+    background-color: #055282;
+    color: #003353;
+}
+.buttonstyle2 {
+  background-color: #055282;
+  color: #5DB9F3;
+  font-weight: 700;
+  border-radius: 5px;
+  border:none;
+  padding: 1em;
+  padding-left: 4%;
+  padding-right: 4%;
+  font-size: 1.4em;
+  box-shadow: 0px 3px #4E9CCD; 
+}
+#page > main .description-head{
+    width:100%;
+    text-align: center;
+    margin:auto;
+    font-size: 2em;
+    font-weight: 700;
+    color: #003353;
+}
+.description {
+    width: 80%;
+    text-align: center;
+    margin:auto;
+    font-size: 1.4em;
+    font-weight: 400;
+}
+hr {
+    border: 0.1em solid #003353;
+}
+.personaimg {
+    width: 15%;
+    border-radius: 50%;
+    border: solid 0.3em white;
+}
+    </style>
+</head>
+<body>
+    <section id="page">
+        <header> <a href="index.html"> <img src="./images/shared/homebutton.svg" width="auto" class="headericon" height="50px"></a> <a href="#" class="contact1">Contact Me</a></header>
+        <main>
+            <h1 class="abouthead2"><strong>SafeSpace Case study</strong></h1><br>
+          <img class="personaimg" src="./images/case-studies/case-study1/top.png">
+          <h1 class="abouthead">Overview</h1><br>
+          <h4 class="description">People are stuck inside with no opportunities to engage with others, which is disrupting their social lives and communication skills. What solutions can I come up with to mitigate the effects of social isolation while keeping users safe from COVID-19?</h4><br>
+          <h1 class="abouthead">Goals</h1><br>
+          <h4 class="description">Come up with an app that allows users to connect with therapists via video calling, and vaccinated people in their "friends circle" via in-person events.</h4><br>
+          <h1 class="abouthead">Users and Audience</h1><br>
+          <h4 class="description">The target audience is students, alumni, members of communities, workers, and generally people whose communication was negatively affected by the pandemic.</h4><br>
+          <h1 class="abouthead">Stakeholders</h1><br>
+          <h4 class="description">Employees or people who have graduated and have an interest in psychology and the study and betterment of human interaction for themselves or in general.</h4><br>
+          <h1 class="abouthead">Research, Personas, & Problem statements</h1><br>
+          <h4 class="description">I made 3 personas to reflect members of the target audience, including <strong>3 problem statements.</strong></h4><hr>
+         
+          <img src="./images/case-studies/case-study1/persona-face-1.PNG" class="personaimg"><br>
+          <h3 class="description-head"><strong>Albert Wright</strong></h3><br>
+          <h4 class="description">Profile: Stressed employee<br>
+            Gender: Male<br>
+            Age: 23<br>
+            Location: Seattle, WA<br>
+            Occupation: Accountant<br>
+            Marital status: Single<br></h4><br>
+          <h3 class="description-head">Motivation</h3><br>
+          <h4 class="description">Albert has been stressed at work lately. With deadlines piling up and the inability to have someone watch over his shoulder as he works, he has been having a hard time keeping up. Albert wishes he could manage his stress better and knock out more tasks before they start piling up. Albert found SafeSpace through an ad on YouTube.</h4><br>
+          <h3 class="description-head">Goals</h3><br>
+          <h4 class="description">Reduce stress and improve virtual communication skills.</h4><br>
+          <h3 class="description-head">Frustrations</h3><br>
+          <h4 class="description">Can't properly engage over Zoom, needs face-to-face.</h4><br>
+          <h3 class="description-head">Problem statement</h3><br>
+          <h4 class="description"> &quot;I just want to be able to finish a day of work feeling happy and accomplished, but I can't because I'm always behind on my work.&quot;</h4><hr>
+         
+          <img src="./images/case-studies/case-study1/persona-face-2.PNG" class="personaimg"><br>
+          <h3 class="description-head"><strong>Sarah Johnson</strong></h3><br>
+          <h4 class="description">Profile: Overwhelmed student<br>
+            Gender: Female<br>
+            Age: 19<br>
+            Location: Seattle, WA<br>
+            Occupation: Student<br>
+            Marital status: Single<br></h4><br>
+          <h3 class="description-head">Motivation</h3><br>
+          <h4 class="description">Sarah is upset that she doesn't have the chance to make new friends and tell them about what's going on in her life. She misses being able to open up to people and finds it hard to do so with people she meets in her Zoom classes. Sarah found SafeSpace through an ad on Instagram.</h4><br>
+          <h3 class="description-head">Goals</h3><br>
+          <h4 class="description">Improved experience of communication and interaction during the pandemic.</h4><br>
+          <h3 class="description-head">Frustrations</h3><br>
+          <h4 class="description">Uncomfortable being recorded while needing to turn on webcam.</h4><br>
+          <h3 class="description-head">Problem statement</h3><br>
+          <h4 class="description"> &quot;I crave human interaction and being able to open up again, but I can't meet new people as a student in online school.&quot;</h4><hr>
+          
+          <img src="./images/case-studies/case-study1/persona-face-3.PNG" class="personaimg"><br>
+          <h3 class="description-head"><strong>Jack Smith</strong></h3><br>
+          <h4 class="description">Profile: Frustrated student<br>
+            Gender: Male<br>
+            Age: 21<br>
+            Location: Seattle, WA<br>
+            Occupation: Student<br>
+            Marital status: Single<br></h4><br>
+          <h3 class="description-head">Motivation</h3><br>
+          <h4 class="description">Jack is upset with the way his large school has crippled the ability to make connections. As a computer science student, Jack would love to meet new people and form connections in his field, but with everyone having their cameras off during class, it's difficult for him to strike up conversation. Jack found SafeSpace through word of mouth.</h4><br>
+          <h3 class="description-head">Goals</h3><br>
+          <h4 class="description">Gain the ability to interact with people in a meaningful way and form new connections.</h4><br>
+          <h3 class="description-head">Frustrations</h3><br>
+          <h4 class="description">Uncomfortable with Zoom's privacy policy.</h4><br>
+          <h3 class="description-head">Problem statement</h3><br>
+          <h4 class="description"> &quot;I want to be able to make connections in my field and meet like minded people from my university.&quot;</h4><hr>
+
+          <h1 class="abouthead">Challenges</h1><br>
+          <h4 class="description">I surveyed a group of 9 people, and the most common complaints say Zoom is invasive, video communication is not engaging, and the lack of personal communication during the pandemic is a problem.</h4><br>
+          
+          <h1 class="abouthead">Design Requirements</h1><br>
+          <h4 class="description"><strong>- Lightweight interface to prevent lag</strong></h4><br>
+          <h4 class="description"><strong>- Make interaction more engaging</strong></h4><br>
+          <h4 class="description">The app must allow vaccinated users to RSVP to socially distanced events with other vaccinated users.</h4><br>
+
+          <h1 class="abouthead">Research Methods</h1><br>
+          <h4 class="description"><strong>- Interviews</strong></h4><br>
+          <h4 class="description"><strong>- Surveys</strong></h4><br>
+          <h4 class="description"><strong>- Competitive analysis</strong></h4><br>
+          <h4 class="description">I used these research methods to conduct research to learn more about the target audience, stakeholders, and to compare similar existing services and applications. This allowed me to collect data and create personas in order to help with drafting a new app.</h4><br>
+
+          <h1 class="abouthead">Interview Questions</h1><br>
+          <h4 class="description">I posed 10 questions each to 9 different people in order to get a feel for what they're looking for most in an app. Following the responses to these questions, I also conducted a <strong>likert scale</strong> survey to prioritize tasks.</h4><br>
+  
+          <h1 class="abouthead">Scope and Constraints</h1><br>
+          <h4 class="description">In order to produce a successful product, competitors must be kept in mind. As such, I conducted a competitive analysis on 3 products that offer similar features to SafeSpace.</h4><br>
+          <h4 class="description">The big competitors are Apple, with their COVID-19 tracker, Zoom, with their video conferencing app, and Talkspace, with their online therapy app. SafeSpace seeks to combine all 3 of these apps into something new and easy to use.</h4><br>
+          <h4 class="description">The typical budget of a startup is only a few thousand dollars, and to compete with these large players, there needs to be a complete understanding of the goal.</h4><br>
+  
+          <h1 class="abouthead">Competitive Analysis</h1><br>
+          <h4 class="description"><strong>Apple's COVID-19 tracker</strong></h4><br>
+          <h4 class="description">Target audience: iPhone users (110+ million people)</h4><br>
+          <h4 class="description">Features: COVID-19 infection rate tracking.</h4><br>
+          <h4 class="description">Social media presence: 34+ million followers across Twitter, Facebook, and YouTube.</h4><br>
+          
+          <h4 class="description"><strong>Zoom</strong></h4><br>
+          <h4 class="description">Target audience: Companies size of 1-10 employees, schools.</h4><br>
+          <h4 class="description">Features: Video conferencing, chat, rooms & workspaces, app marketplace.</h4><br>
+          <h4 class="description">Social media presence: Collective following of 1.9 million people across Twitter, Facebook, and YouTube.</h4><br>
+          
+          <h4 class="description"><strong>Talkspace</strong></h4><br>
+          <h4 class="description">Target audience: Anyone who can afford the $65+/wk cost.</h4><br>
+          <h4 class="description">Features: Text, audio, picture, and video messages, licensed therapists, Encryption and HIPAA compliance.</h4><br>
+          <h4 class="description">Social media presence: Collective following of 226,000 people across Twitter, Facebook, and Instagram.</h4><br>
+          
+          <h1 class="abouthead">Sketches & Wireframes</h1><br>
+          <h4 class="description">The sketches and wireframes sought to get ideas down for what the interface might look like. I sketched some screens on paper and drafted up wireframes in Figma.</h4><br>
+          <img class="img" src="./images/case-studies/case-study1/sketches-1.jpg"><br>
+          <img class="img" src="./images/case-studies/case-study1/sketches-2.jpg"><br>
+          <img class="img" src="./images/case-studies/case-study1/sketches-3.png"><br>
+          <img class="img" src="./images/case-studies/case-study1/wireframes-1.PNG"><br>
+          <img class="img" src="./images/case-studies/case-study1/wireframes-2.PNG"><br>
+
+          <h1 class="abouthead">Evaluation</h1><br>
+          <h4 class="description">After presenting the wireframes to members of the target audience, I received some valuable feedback for the next stage of the process. The most requested change was to remove the tiles, as users found it to be inconvenient and a waste of screen space.</h4><br>
+
+          <h1 class="abouthead">Deliverable Prototype</h1><br>
+          <h4 class="description">Following the feedback of my test group, I went ahead and built a prototype with all of these things in mind. I added colors to the app, optimized the layout, and followed mobile design best practices, such as the exclusion of a hamburger menu.</h4><br>
+          <img class="img" src="./images/case-studies/case-study1/prototype-1.PNG"><br>
+          <img class="img" src="./images/case-studies/case-study1/prototype-2.PNG"><br>
+          <img class="img" src="./images/case-studies/case-study1/prototype-3.PNG"><br>
+          <form action="https://xd.adobe.com/view/d3505ec0-b8d4-44fa-a227-259f34364429-8603/?fullscreen&hints=off" target="_blank">
+            <input type="submit" class="buttonstyle" value="Click for demo">
+            </form>
+
+          <h1 class="abouthead">Post-prototype Evaluation</h1><br>
+          <h4 class="description">Following the creation of the prototype, I put it into the hands of 5 people belonging to the target audience to try. The vast majority were completely satisfied with the changes made since the wireframing stage, and all of them said the app needs little to no change in interface, and that all of the elements are intuitive.</h4><br>
+
+          <h1 class="abouthead">Take-aways</h1><br>
+          <h4 class="description">Every problem requires several ideas to get to ball rolling in finding the solution. In this project, every large stage of the design took several days of work and incredible attention to detail. I learned about the best practices of mobile design by studying and critiquing various major apps such as Instagram and Twitter. I analyzed user flows and used my findings to make the SafeSpace experience more intuitive.</h4><br>
+           
+
+          <form action="#top">
+            <input type="submit" class="buttonstyle2" value="Back to top">
+            </form>         
+            </main>
+        <footer>&copy;2021 Bogdan Banica. All rights reserved.</footer>
+      </section>
+</body>
+</html>
