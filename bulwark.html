@@ -14,10 +14,10 @@
   width: 100%;
   height: 100%;
   grid-template-areas: "head head"
-                       "section  main"
+                       "main main"
                        "foot foot";
-  grid-template-rows: 1fr 12fr 1fr;
-  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 10fr 1fr;
+  grid-template-columns: 1fr;
 }
 @media only screen and (max-width: 600px) {
     #page {
@@ -25,11 +25,32 @@
   width: 100%;
   height: 100%;
   grid-template-areas: "head head"
-                       "section  section"
                        "main main"
                        "foot foot";
-  grid-template-rows: 1fr 3fr 7fr 1fr;
-  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 10fr 1fr;
+  grid-template-columns: 1fr;
+}
+    #page > main img {
+        width: 100%;
+    }
+    #page > main video {
+        border: 5px solid white;
+        border-radius: 5px;
+        width: 100%;
+    }
+    #page > .description-head{
+    width:50%;
+    text-align: center;
+    margin:auto;
+    font-weight: 700;
+    color: #003353;
+}
+#page > .description {
+    width: 80%;
+    text-align: center;
+    margin:auto;
+    font-size: 1.4em;
+    font-weight: 400;
 }
 }
 
@@ -41,24 +62,14 @@ text-align: center;
   color: white;
 }
 
-#page > section {
-  grid-area: section;
-  background-color: #1982C4;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 25%;
-  padding-bottom: 25%;
-}
-
 #page > main {
   grid-area: main;
   background-color: #5DB9F3;
   text-align: center;
   align-items: center;
   justify-content: center;
-  padding-top: 15%;
-  padding-bottom: 15%;
+  padding-top: 5%;
+  padding-bottom: 5%;
   padding-left: 5%;
   padding-right: 5%;
   color: #055282;
@@ -131,23 +142,76 @@ text-align: center;
   border-radius: 5px;
   border:none;
   padding: 1em;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 10%;
+  padding-right: 10%;
   font-size: 1.4em;
   box-shadow: 0px 3px #4E9CCD; 
+}
+.img {
+    width: 25%;
+    border-bottom: solid 1em #5DB9F3;
+}
+.buttonstyle2:hover {
+    background-color:#46a2db;
+    color: #003353;
+}
+.buttonstyle2:active {
+    background-color: #055282;
+    color: #003353;
+}
+.buttonstyle2 {
+  background-color: #055282;
+  color: #5DB9F3;
+  font-weight: 700;
+  border-radius: 5px;
+  border:none;
+  padding: 1em;
+  padding-left: 4%;
+  padding-right: 4%;
+  font-size: 1.4em;
+  box-shadow: 0px 3px #4E9CCD; 
+}
+#page > main .description-head{
+    width:100%;
+    text-align: center;
+    margin:auto;
+    font-size: 2em;
+    font-weight: 700;
+    color: #003353;
+}
+.description {
+    width: 80%;
+    text-align: center;
+    margin:auto;
+    font-size: 1.4em;
+    font-weight: 400;
+}
+hr {
+    border: 0.1em solid #003353;
+}
+.abouthead2 {
+    font-weight: 800;
+    color: #003353;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    float: center;
+    margin: auto;
 }
     </style>
 </head>
 <body>
     <section id="page">
-        <header><img src="./images/shared/homebutton.svg" width="auto" class="headericon" height="50px"> <a href="contact.html" class="contact1">Contact Me</a></header>
-        <section><img src="./images/home/bbanica.svg" alt="Bogdan Banica product designer" width="80%" height="auto" class="center"></section>
+        <header> <a href="index.html"> <img src="./images/shared/homebutton.svg" width="auto" class="headericon" height="50px"></a> <a href="contact.html" class="contact1">Contact Me</a></header>
         <main>
-            <h1 class="abouthead"><strong>About me</strong></h1>
-            <br>
-                <article class="aboutme">Hi! My name is Bogdan, and I'm a product designer based in Redmond, WA. I took an interest in design at an early age, and have stuck with it since. I had designed UI mock-ups before, but took my interest in product design to the next level upon completion of a research project during my first year of college. I'd love for you to see what I've come up with over the years!</article>
-                <br> 
-                <a href= "./gallery.html"><input type="button" class="buttonstyle" value="View my work"></a> 
+          <h1 class="abouthead2"><strong>Bulwark</strong></h1><hr>
+          <h3 class="description">Bulwark (meaning &quot;fortification&quot;) is a top-down shooter game in which you defend yourself from waves of zombies. It was made for the 2019 GDL Christmas jam on itch.io. This was my first game jam game!</h3><br>
+          <img class="img" src="./images/design/bulwark-1.png"> <img class="img" src="./images/design/bulwark-2.png"> <br>
+          <form action="https://bbanica.itch.io/bulwark" target="_blank">
+            <input type="submit" class="buttonstyle" value="Download on itch.io">
+            </form>
+            <a href="./gallery.html"> <input type="button" class="buttonstyle2" value="Back to gallery"></a>
 
             </main>
         <footer>&copy;2021 Bogdan Banica. All rights reserved.</footer>

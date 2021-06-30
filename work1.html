@@ -1,0 +1,386 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Bogdan Banica</title>
+    <link rel="shortcut icon" href="./images/shared/favicon.ico" />
+    <style>
+        body {
+            background-color: #5DB9F3;
+        }
+        #page {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas: "head head"
+                       "main main"
+                       "foot foot";
+  grid-template-rows: 1fr 10fr 1fr;
+  grid-template-columns: 1fr;
+}
+@media only screen and (max-width: 600px) {
+    #page {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas: "head head"
+                       "main main"
+                       "foot foot";
+  grid-template-rows: 1fr 10fr 1fr;
+  grid-template-columns: 1fr;
+}
+    #page > main img {
+        border-radius: 5px;
+        width: 100%;
+    }
+    #page > main video {
+        border: 0.3em solid #1982C4;
+        border-radius: 5px;
+        width: 100%;
+    }
+    #page > main .description-head{
+    width:100%;
+    text-align: center;
+    margin:auto;
+    font-size: 2em;
+    font-weight: 700;
+    color: #003353;
+}
+    #page > main .description {
+    width: 100%;
+    text-align: center;
+    margin:auto;
+    font-size: 1.4em;
+    font-weight: 400;
+}
+}
+
+#page > header {
+text-align: center;
+    grid-area: head;
+    background-color: #055282;
+    padding: 1%;
+  color: white;
+}
+
+#page > main {
+  grid-area: main;
+  background-color: #5DB9F3;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  color: #055282;
+  margin:auto;
+}
+
+#page > footer {
+  grid-area: foot;
+  background-color: #055282;
+  text-align: center;
+  color:white;
+  line-height: 100px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.contact1 {
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+  margin-right: 5%;
+  background-color: #FFCA3A;
+  color: #95710D;
+  font-weight: 700;
+  border-radius: 5px;
+  border:none;
+  margin:auto;
+  padding:1em;
+  float: right;
+  text-decoration: none;
+}
+.contact1:hover {
+    background-color:#FFE292;
+    color: #95710D;
+}
+.contact1:active {
+    background-color: #95710D;
+    color: #3f2f03;
+}
+.buttonstyle:hover {
+    background-color:#FFE292;
+    color: #95710D;
+}
+.buttonstyle:active {
+    background-color: #95710D;
+    color: #3f2f03;
+}
+.buttonstyle2:hover {
+    background-color:#46a2db;
+    color: #003353;
+}
+.buttonstyle2:active {
+    background-color: #055282;
+    color: #003353;
+}
+.headericon {
+    display: inline;
+    margin:auto;
+    float: left;
+    justify-content: center;
+}
+.abouthead {
+    font-weight: 800;
+    color: white;
+    text-shadow: 0em 0.1em 0.1em #055282;
+}
+.aboutme {
+    font-size: 1.4em;
+    font-weight: 400;
+}
+.buttonstyle {
+  background-color: #FFCA3A;
+  color: #95710D;
+  font-weight: 700;
+  border-radius: 5px;
+  border:none;
+  padding: 1em;
+  padding-left: 4%;
+  padding-right: 4%;
+  font-size: 1.4em;
+  box-shadow: 0px 3px #4E9CCD; 
+}
+.buttonstyle2 {
+  background-color: #055282;
+  color: #5DB9F3;
+  font-weight: 700;
+  border-radius: 5px;
+  border:none;
+  padding: 1em;
+  padding-left: 4%;
+  padding-right: 4%;
+  font-size: 1.4em;
+  box-shadow: 0px 3px #4E9CCD; 
+}
+.img {
+    border: 0.3em solid #1982C4;
+    border-radius: 5px;
+    width: 50%;
+}
+#myImg {
+  cursor: pointer;
+  border: 0.3em solid #1982C4;
+  border-radius: 5px;
+  width: 50%;
+  transition: 0.3s;
+  background-color: #1982C4;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+.description-head{
+    width:50%;
+    text-align: center;
+    margin:auto;
+    font-weight: 700;
+    color: #003353;
+}
+.description {
+    width: 50%;
+    text-align: center;
+    margin:auto;
+    font-size: 1.4em;
+    font-weight: 400;
+}
+hr {
+    border: 0.1em solid #003353;
+}
+    </style>
+</head>
+<body>
+    <section id="page">
+        <header>
+          <a href="./index.html"> <img src="./images/shared/homebutton.svg" width="auto" class="headericon" height="50px"></a> <a href="contact.html" class="contact1">Contact Me</a></header>
+        <main>
+
+            <h1 class="description-head">Design</h1><hr>
+            <h3 class="description">This is a collection of my visual design work. This ranges from graphic design, to typographic work, to sketches, and even photo/video projects. My skills have improved with time, therefore I decided to omit hundreds of past projects as they do not represent my current standard of quality.</h3><br>
+            <a href="gallery.html"> <input type="button" class="buttonstyle2" value="Back to gallery"><br><br></a>
+
+            <img class="myImages" id="myImg" src="./images/design/bb_self_logo.png" alt="BB monogram logo"> <br>
+            <h2 class="abouthead">BB monogram logo</h2><br>
+
+            <img class="myImages" id="myImg" src="./images/design/rock_crawling.png" alt="Illustration of jeep crawling over rocks in a sandy environment" width="100%"> <br>
+            <h2 class="abouthead">Rock crawling jeep</h2><br>
+            <video class="img" controls>
+                <source src="./images/design/cocoloco_video_with_sound.mp4" type="video/mp4">
+              </video> <br>
+              <h2 class="abouthead">Cocktail motion graphic</h2><br>
+
+              <img class="myImages" id="myImg" src="./images/design/tea_product_designs.png" alt="Black tea, green tea, and white tea labels" width="100%"> <br>
+              <h2 class="abouthead">Tea labels</h2><br><br>
+
+              <img class="myImages" id="myImg" src="./images/design/redfin_poster.png" alt="Redfin advertisement poster" width="100%"> <br>
+              <h2 class="abouthead">Redfin advertisement poster</h2><br><br>
+
+              <img class="myImages" id="myImg" src="./images/design/jeep.png" alt="Jeep driving in the sunshine" width="100%"> <br>
+              <h2 class="abouthead">Jeep</h2><br><br>
+
+              <img class="myImages" id="myImg" src="./images/design/solar_company_logo.jpg" alt="Star solar company logo" width="100%"> <br>
+              <h2 class="abouthead">Solar company logo</h2><br><br>
+
+              <img class="myImages" id="myImg" src="./images/design/bbanica_photo_collage.png" alt="Photo collage" width="100%"> <br>
+              <h2 class="abouthead">Photo collage</h2><br><br>
+
+              <img class="myImages" id="myImg" src="./images/design/cat.png" alt="Smiling cat with heart eyes" width="100%"> <br>
+              <h2 class="abouthead">Cat</h2><br><br>
+
+              <img class="myImages" id="myImg" src="./images/design/wood.png" alt="Wood textured 'wood' text" width="100%"> <br>
+              <h2 class="abouthead">Wood text</h2><br><br>
+
+              <img class="myImages" id="myImg" src="./images/design/boggos_cereal_box.png" alt="Cereal box" width="100%"> <br>
+              <h2 class="abouthead">Cereal box</h2><br><br>
+
+              <img class="myImages" id="myImg" src="./images/design/ships.png" alt="Ships in ocean" width="100%"> <br>
+              <h2 class="abouthead">Ships</h2><br><br>
+
+              <img class="myImages" id="myImg" src="./images/design/sketches.jpg" alt="Sketches of shoes" width="100%"> <br>
+              <h2 class="abouthead">Shoe sketches</h2><br><br>
+
+              <img class="myImages" id="myImg" src="./images/design/contour.jpg" alt="Cross-contour sketch of cups and roll of tape" width="100%"> <br>
+              <h2 class="abouthead">Cross-contour sketch</h2><br><br>
+
+              <img class="myImages" id="myImg" src="./images/design/still_life.jpg" alt="Continuous tone still life of toothbrush, rubik's cube, and candle" width="100%"> <br>
+              <h2 class="abouthead">Continuous tone sketch</h2><br><br>
+
+              <form action="#top">
+              <input type="submit" class="buttonstyle2" value="Back to top">
+              </form>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
+            
+            <script>
+            // create references to the modal
+            var modal = document.getElementById('myModal');
+            // to all images -- using a class
+            var images = document.getElementsByClassName('myImages');
+            // the image in the modal
+            var modalImg = document.getElementById("img01");
+            // and the caption in the modal
+            var captionText = document.getElementById("caption");
+
+            // go through all of the images with custom class
+            for (var i = 0; i < images.length; i++) {
+            var img = images[i];
+            // attach click listener for image
+            img.onclick = function(evt) {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+            }
+
+            var span = document.getElementsByClassName("close")[0];
+
+            span.onclick = function() {
+            modal.style.display = "none";
+            }
+            </script>
+            </main>
+        <footer>&copy;2021 Bogdan Banica. All rights reserved.</footer>
+      </section>
+</body>
+</html>

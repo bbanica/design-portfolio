@@ -14,10 +14,10 @@
   width: 100%;
   height: 100%;
   grid-template-areas: "head head"
-                       "section  main"
+                       "main main"
                        "foot foot";
-  grid-template-rows: 1fr 12fr 1fr;
-  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 10fr 1fr;
+  grid-template-columns: 1fr;
 }
 @media only screen and (max-width: 600px) {
     #page {
@@ -25,12 +25,20 @@
   width: 100%;
   height: 100%;
   grid-template-areas: "head head"
-                       "section  section"
                        "main main"
                        "foot foot";
-  grid-template-rows: 1fr 3fr 7fr 1fr;
-  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 10fr 1fr;
+  grid-template-columns: 1fr;
 }
+    #page > main img {      
+        border-radius: 15px;
+        width: 100%;
+    }
+    #page > main video {
+        border: 5px solid white;
+        border-radius: 5px;
+        width: 100%;
+    }
 }
 
 #page > header {
@@ -41,24 +49,14 @@ text-align: center;
   color: white;
 }
 
-#page > section {
-  grid-area: section;
-  background-color: #1982C4;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 25%;
-  padding-bottom: 25%;
-}
-
 #page > main {
   grid-area: main;
   background-color: #5DB9F3;
   text-align: center;
   align-items: center;
   justify-content: center;
-  padding-top: 15%;
-  padding-bottom: 15%;
+  padding-top: 5%;
+  padding-bottom: 3%;
   padding-left: 5%;
   padding-right: 5%;
   color: #055282;
@@ -117,8 +115,15 @@ text-align: center;
     justify-content: center;
 }
 .abouthead {
-    font-weight: 700;
-    color: #003353;
+    font-weight: 800;
+    color: white;
+    text-shadow: 0em 0.1em 0.1em #055282;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    float: center;
+    margin: auto;
 }
 .aboutme {
     font-size: 1.4em;
@@ -136,19 +141,68 @@ text-align: center;
   font-size: 1.4em;
   box-shadow: 0px 3px #4E9CCD; 
 }
+.img {
+    border-radius: 3em;
+    width: 100%;
+}
+.outer-grid {
+   display: flex;
+   flex-wrap: wrap;
+}
+.inner-grid {
+   flex: 25%;
+   max-width: 35%;
+   /* MAX WIDTH IN A 3 ROW SHOULD BE 25% */
+   margin:auto;
+   padding: 1em;
+}
+.inner-grid img {
+   margin-top: 8px;
+   width: 100%;
+   padding: 10px;
+   margin:auto;
+}
+@media screen and (max-width: 800px) {
+   .inner-grid {
+      flex: 50%;
+      max-width: 50%;
+   }
+}
+@media screen and (max-width: 600px) {
+   .inner-grid {
+      flex: 100%;
+      max-width: 100%;
+   }
+}
+hr {
+    border: 0.1em solid #003353;
+}
     </style>
 </head>
 <body>
     <section id="page">
-        <header><img src="./images/shared/homebutton.svg" width="auto" class="headericon" height="50px"> <a href="contact.html" class="contact1">Contact Me</a></header>
-        <section><img src="./images/home/bbanica.svg" alt="Bogdan Banica product designer" width="80%" height="auto" class="center"></section>
+        <header><a href="./index.html"><img src="./images/shared/homebutton.svg" width="auto" class="headericon" height="50px"></a> <a href="contact.html" class="contact1">Contact Me</a></header>
         <main>
-            <h1 class="abouthead"><strong>About me</strong></h1>
-            <br>
-                <article class="aboutme">Hi! My name is Bogdan, and I'm a product designer based in Redmond, WA. I took an interest in design at an early age, and have stuck with it since. I had designed UI mock-ups before, but took my interest in product design to the next level upon completion of a research project during my first year of college. I'd love for you to see what I've come up with over the years!</article>
-                <br> 
-                <a href= "./gallery.html"><input type="button" class="buttonstyle" value="View my work"></a> 
-
+            <h1 class="abouthead">Case Studies</h1><hr>
+            <div class="outer-grid">
+                <div class="inner-grid">
+                <a href="case-study2.html"><img class="img" src="./images/case-studies/self-site-thumbnail.png"/></a>
+                <h1 class="abouthead">Portfolio Website</h1><br>
+                <!-- <img src=""/> -->
+                <!-- <img src=""/> -->
+                </div>
+                <div class="inner-grid">
+                <a href="case-study1.html"> <img class="img" src="./images/case-studies/safe-space-thumbnail.png"/></a>
+                <h1 class="abouthead">SafeSpace</h1><br>
+                <!-- <img src=""/>
+                <img src=""/>
+                </div> 
+                <div class="inner-grid">
+                <img src=""/>
+                <img src=""/>
+                <img src=""/>
+                </div> -->
+                </div>
             </main>
         <footer>&copy;2021 Bogdan Banica. All rights reserved.</footer>
       </section>

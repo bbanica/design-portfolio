@@ -14,10 +14,10 @@
   width: 100%;
   height: 100%;
   grid-template-areas: "head head"
-                       "section  main"
+                       "main main"
                        "foot foot";
-  grid-template-rows: 1fr 12fr 1fr;
-  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 10fr 1fr;
+  grid-template-columns: 1fr;
 }
 @media only screen and (max-width: 600px) {
     #page {
@@ -25,11 +25,32 @@
   width: 100%;
   height: 100%;
   grid-template-areas: "head head"
-                       "section  section"
                        "main main"
                        "foot foot";
-  grid-template-rows: 1fr 3fr 7fr 1fr;
-  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 10fr 1fr;
+  grid-template-columns: 1fr;
+}
+    #page > main img {
+        width: 10%;
+    }
+    #page > main video {
+        border: 5px solid white;
+        border-radius: 5px;
+        width: 100%;
+    }
+    #page > .description-head{
+    width:50%;
+    text-align: center;
+    margin:auto;
+    font-weight: 700;
+    color: #003353;
+}
+#page > .description {
+    width: 80%;
+    text-align: center;
+    margin:auto;
+    font-size: 1.4em;
+    font-weight: 400;
 }
 }
 
@@ -41,24 +62,14 @@ text-align: center;
   color: white;
 }
 
-#page > section {
-  grid-area: section;
-  background-color: #1982C4;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 25%;
-  padding-bottom: 25%;
-}
-
 #page > main {
   grid-area: main;
   background-color: #5DB9F3;
   text-align: center;
   align-items: center;
   justify-content: center;
-  padding-top: 15%;
-  padding-bottom: 15%;
+  padding-top: 5%;
+  padding-bottom: 5%;
   padding-left: 5%;
   padding-right: 5%;
   color: #055282;
@@ -136,19 +147,66 @@ text-align: center;
   font-size: 1.4em;
   box-shadow: 0px 3px #4E9CCD; 
 }
+.img {
+    width: 8%;
+    display:inline;
+    border-bottom: solid 1em #5DB9F3;
+}
+.buttonstyle2:hover {
+    background-color:#46a2db;
+    color: #003353;
+}
+.buttonstyle2:active {
+    background-color: #055282;
+    color: #003353;
+}
+.buttonstyle2 {
+  background-color: #055282;
+  color: #5DB9F3;
+  font-weight: 700;
+  border-radius: 5px;
+  border:none;
+  padding: 1em;
+  padding-left: 4%;
+  padding-right: 4%;
+  font-size: 1.4em;
+  box-shadow: 0px 3px #4E9CCD; 
+}
+#page > main .description-head{
+    width:100%;
+    text-align: center;
+    margin:auto;
+    font-size: 2em;
+    font-weight: 700;
+    color: #003353;
+}
+.description {
+    width: 100%;
+    display: inline;
+    text-align: center;
+    margin:auto;
+    font-size: 1.4em;
+    font-weight: 400;
+}
+hr {
+    border: 0.1em solid #055282;
+}
+a{
+    text-decoration: none;
+    color: #003353;
+}
     </style>
 </head>
 <body>
     <section id="page">
-        <header><img src="./images/shared/homebutton.svg" width="auto" class="headericon" height="50px"> <a href="contact.html" class="contact1">Contact Me</a></header>
-        <section><img src="./images/home/bbanica.svg" alt="Bogdan Banica product designer" width="80%" height="auto" class="center"></section>
+        <header> <a href="index.html"> <img src="./images/shared/homebutton.svg" width="auto" class="headericon" height="50px"></a> <a href="#" class="contact1">Contact Me</a></header>
         <main>
-            <h1 class="abouthead"><strong>About me</strong></h1>
-            <br>
-                <article class="aboutme">Hi! My name is Bogdan, and I'm a product designer based in Redmond, WA. I took an interest in design at an early age, and have stuck with it since. I had designed UI mock-ups before, but took my interest in product design to the next level upon completion of a research project during my first year of college. I'd love for you to see what I've come up with over the years!</article>
-                <br> 
-                <a href= "./gallery.html"><input type="button" class="buttonstyle" value="View my work"></a> 
-
+          <h1 class="description-head">Get in touch!</h1><hr>
+          <a href="https://www.linkedin.com/in/bbanica-wa/" target="blank"><h3 class="description">Connect with me on LinkedIn &ThinSpace;</h3> <img class="img" src="./images/contact/linkedinlogo.svg"></a><br>
+          <a href="mailto:bogdibo@gmail.com"><h3 class="description">Reach out via e-mail &ThinSpace;</h3> <img class="img" src="./images/contact/email.svg"><br></a>
+          <a href="https://www.behance.net/bbanica" target="blank"><h3 class="description">Check out my Behance &ThinSpace;</h3> <img class="img" src="./images/contact/behancelogo.svg"></a><br>
+          
+       
             </main>
         <footer>&copy;2021 Bogdan Banica. All rights reserved.</footer>
       </section>
